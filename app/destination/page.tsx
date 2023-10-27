@@ -11,34 +11,34 @@ export default function Destination() {
 
     return (
         <div className={styles.content}>
-            <h1>
-                01 Pick your destination
-            </h1>
-            <Image src={selectedDestination.images.png} alt={"Space Tourism"} width={32} height={32} />
-            <ul>
+            <h3>
+                {"01 Pick your destination".toUpperCase()}
+            </h3>
+            <Image className={styles.image} src={selectedDestination.images.png} alt={"Space Tourism"} width={320} height={320} />
+            <ul className={styles.ul}>
                 {destinations.map((destination) => (
                     <li key={destination.name} onClick={
                         () => setSelectedDestination(destination)
                     }>
-                        {destination.name}
+                        {destination.name.toUpperCase()}
                     </li>
                 ))}
             </ul>
-            <h2>
+            <h1>
                 {selectedDestination.name}
-            </h2>
+            </h1>
             <p>
                 {selectedDestination.description}
             </p>
-            <div></div>
+            <div className={styles.separator}></div>
             <p>AVG. DISTANCE</p>
-            <p>
-                {selectedDestination.distance}
-            </p>
+            <h2>
+                {selectedDestination.distance.toUpperCase()}
+            </h2>
             <p>EST. TRAVEL TIME</p>
-            <p>
-                {selectedDestination.travel}
-            </p>
+            <h2>
+                {selectedDestination.travel.toUpperCase()}
+            </h2>
         </div>
     );
 }

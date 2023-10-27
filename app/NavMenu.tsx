@@ -21,7 +21,7 @@ export default function NavMenu() {
                 </button>
             </div>
             {showMenu ? (
-                <div>
+                <div className={styles.list}>
                     <ul >
                         <li>
                             <Link href={"/"}>00 Home</Link>

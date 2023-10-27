@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Bellefair } from 'next/font/google'
 import './globals.scss'
 import NavMenu from './NavMenu'
 
-const inter = Inter({ subsets: ['latin'] })
+const bellefair = Bellefair({
+  subsets: ['latin'],
+  weight: '400'
+})
 
 export const metadata: Metadata = {
   title: 'Space Tourism',
@@ -17,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={bellefair.className}>
         <NavMenu />
         {children}</body>
     </html>
