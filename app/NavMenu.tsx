@@ -10,25 +10,33 @@ export default function NavMenu() {
 
     return (
         <nav className={styles.nav}>
-            <button onClick={() => setShowMenu(!showMenu)} className={styles.burger}>
-                <div className={`${styles.line_top} ${showMenu ? styles.line_rotateTopLine : styles.line_reverseRotateTopLine}`}></div>
-                <div className={`${styles.line_bottom} ${showMenu ? styles.line_rotateBottomLine : styles.line_reverseRotateBottomLine}`}></div>
-            </button>
+            <div className={styles.nav_content}>
+                <Link href={"/"}>
+                    <Image src={"/logo.svg"} alt={"Space Tourism"} width={32} height={32} />
+                </Link>
+                <button onClick={() => setShowMenu(!showMenu)} className={styles.burger}>
+                    <div className={`${styles.line_top} ${showMenu ? styles.line_rotateTopLine : styles.line_reverseRotateTopLine}`}></div>
+                    <div className={`${styles.line_middle} ${showMenu ? styles.line_rotateMiddleLine : styles.line_reverseRotateMiddleLine}`}></div>
+                    <div className={`${styles.line_bottom} ${showMenu ? styles.line_rotateBottomLine : styles.line_reverseRotateBottomLine}`}></div>
+                </button>
+            </div>
             {showMenu ? (
-                <ul >
-                    <li>
-                        <Link href={"/"}>00 Home</Link>
-                    </li>
-                    <li>
-                        <Link href={"/destination"}>01 Destination</Link>
-                    </li>
-                    <li>
-                        <Link href={"/crew"}>02 Crew</Link>
-                    </li>
-                    <li>
-                        <Link href={"/technology"}>03 Technology</Link>
-                    </li>
-                </ul>
+                <div>
+                    <ul >
+                        <li>
+                            <Link href={"/"}>00 Home</Link>
+                        </li>
+                        <li>
+                            <Link href={"/destination"}>01 Destination</Link>
+                        </li>
+                        <li>
+                            <Link href={"/crew"}>02 Crew</Link>
+                        </li>
+                        <li>
+                            <Link href={"/technology"}>03 Technology</Link>
+                        </li>
+                    </ul>
+                </div>
             ) : null}
         </nav>
     );
