@@ -10,17 +10,17 @@ export default function Crew() {
     const [selectedCrewMember, setSelectedCrewMember] = useState(crewMembers[0]);
 
     return (
-        <div>
-            <h1>
-                02 Meet your crew
-            </h1>
-            <Image src={selectedCrewMember.images.png} alt={"Space Tourism"} width={32} height={32} />
-            <ul>
+        <div className={styles.content}>
+            <h3>
+                {"02 Meet your crew".toUpperCase()}
+            </h3>
+            <Image className={styles.image} src={selectedCrewMember.images.png} alt={"Space Tourism"} width={32} height={32} />
+            <ul className={styles.ul}>
                 {crewMembers.map((crewMember) => (
                     <li key={crewMember.name} onClick={
                         () => setSelectedCrewMember(crewMember)
                     }>
-                        <div></div>
+                        <div>x</div>
                     </li>
                 ))}
             </ul>
