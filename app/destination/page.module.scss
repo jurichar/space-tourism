@@ -52,29 +52,31 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 2rem;
         align-items: center;
+        gap: 2rem;
         width: 100%;
         text-decoration: none;
         list-style: none;
 
-        .selected {
-            padding: 0.5rem 0;
-            color: white;
-            border-bottom: 3px solid white;
-            font-weight: 100;
-        }
-
-        .notSelected {
+        li {
             border-bottom: 3px solid transparent;
             padding: 0.5rem 0;
             color: #D0D6F9;
             font-weight: 100;
+
+            &.active {
+                padding: 0.5rem 0;
+                color: white;
+                border-bottom: 3px solid white;
+                font-weight: 100;
+            }
         }
+
+
+
     }
 
     .separator {
-        margin: 1rem 0;
         width: 100%;
         height: 1px;
         background-color: #D0D6F9;

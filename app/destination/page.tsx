@@ -13,7 +13,7 @@ const barlowCondensed = Barlow_Condensed({
 
 const barlow = Barlow({
     subsets: ["latin"],
-    weight: ["100", "600"],
+    weight: ["100"],
 });
 
 export default function Destination() {
@@ -33,7 +33,7 @@ export default function Destination() {
                     <li key={destination.name} onClick={
                         () => setSelectedDestination(destination)
                     }
-                        className={selectedDestination === destination ? styles.selected : styles.notSelected}
+                        className={selectedDestination === destination ? styles.active : ''}
                     >
                         {destination.name.toUpperCase()}
                     </li>

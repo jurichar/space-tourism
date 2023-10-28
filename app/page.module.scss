@@ -58,5 +58,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: 0 solid rgba(255, 255, 255, 0);
+    transition: all 0.3s ease;
+
+    &:hover {
+      outline: 30px solid rgba(255, 255, 255, 0.15);
+    }
   }
 }

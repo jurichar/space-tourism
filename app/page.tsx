@@ -29,11 +29,9 @@ export default function Home() {
           because we'll give you a truly out of this world experience!
         </p>
       </div>
-      <div className={styles.button}>
-        <Link href={"/destination"}>
-          EXPLORE
-        </Link>
-      </div>
-    </main>
+      <Link href={"/destination"} className={styles.button}>
+        EXPLORE
+      </Link>
+    </main >
   )
 }
