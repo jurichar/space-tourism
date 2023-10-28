@@ -8,6 +8,8 @@ const bellefair = Bellefair({
   weight: '400'
 })
 
+
+
 export const metadata: Metadata = {
   title: 'Space Tourism',
   description: 'Take a trip to Mars or somewhere in the universe and back.',

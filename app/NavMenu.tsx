@@ -4,6 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import styles from "./NavMenu.module.scss";
+import { Barlow_Condensed } from "next/font/google";
+
+const barlow = Barlow_Condensed({
+    subsets: ["latin"],
+    weight: ["100", "600"],
+});
 
 export default function NavMenu() {
     const [showMenu, setShowMenu] = useState(false);
@@ -22,18 +28,42 @@ export default function NavMenu() {
             </div>
             {showMenu ? (
                 <div className={styles.list}>
-                    <ul >
+                    <ul className={barlow.className}>
                         <li>
-                            <Link href={"/"}>00 Home</Link>
+                            <Link href={"/"}>
+                                <strong>
+                                    {"00".toUpperCase()}
+                                </strong>
+                                {" "}
+                                {"Home".toUpperCase()}
+                            </Link>
                         </li>
                         <li>
-                            <Link href={"/destination"}>01 Destination</Link>
+                            <Link href={"/destination"}>
+                                <strong>
+                                    {"01".toUpperCase()}
+                                </strong>
+                                {" "}
+                                {"Destination".toUpperCase()}
+                            </Link>
                         </li>
                         <li>
-                            <Link href={"/crew"}>02 Crew</Link>
+                            <Link href={"/crew"}>
+                                <strong>
+                                    {"02".toUpperCase()}
+                                </strong>
+                                {" "}
+                                {"Crew".toUpperCase()}
+                            </Link>
                         </li>
                         <li>
-                            <Link href={"/technology"}>03 Technology</Link>
+                            <Link href={"/technology"}>
+                                <strong>
+                                    {"03".toUpperCase()}
+                                </strong>
+                                {" "}
+                                {"Technology".toUpperCase()}
+                            </Link>
                         </li>
                     </ul>
                 </div>

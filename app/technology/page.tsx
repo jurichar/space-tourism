@@ -10,12 +10,12 @@ export default function Technology() {
     const [selectedTechnology, setSelectedTechnology] = useState(technologies[0]);
 
     return (
-        <div>
-            <h1>
-                03 Technology
-            </h1>
-            <Image src={selectedTechnology.images.landscape} alt={"Space Tourism"} width={32} height={32} />
-            <ul>
+        <div className={styles.content}>
+            <h3>
+                {"03 Technology".toUpperCase()}
+            </h3>
+            <Image className={styles.image} src={selectedTechnology.images.landscape} alt={"Space Tourism"} width={320} height={320} />
+            <ul className={styles.ul}>
                 {technologies.map((technology) => (
                     <li key={technology.name} onClick={
                         () => setSelectedTechnology(technology)

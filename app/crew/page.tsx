@@ -12,9 +12,11 @@ export default function Crew() {
     return (
         <div className={styles.content}>
             <h3>
-                {"02 Meet your crew".toUpperCase()}
+                <span className={styles.gray}>{"02"}</span>
+                {"   "}
+                <span>{"Meet your crew".toUpperCase()}</span>
             </h3>
-            <Image className={styles.image} src={selectedCrewMember.images.png} alt={"Space Tourism"} width={32} height={32} />
+            <Image className={styles.image} src={selectedCrewMember.images.png} alt={"Space Tourism"} width={320} height={320} />
             <ul className={styles.ul}>
                 {crewMembers.map((crewMember) => (
                     <li key={crewMember.name} onClick={

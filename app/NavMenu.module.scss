@@ -5,14 +5,14 @@
     }
 
     100% {
-        top: 45%;
+        top: 43%;
         transform: rotate(45deg);
     }
 }
 
 @keyframes reverseRotateTopLine {
     0% {
-        top: 45%;
+        top: 43%;
         transform: rotate(45deg);
     }
 
@@ -49,14 +49,14 @@
     }
 
     100% {
-        bottom: 45%;
+        bottom: 43%;
         transform: rotate(-45deg);
     }
 }
 
 @keyframes reverseRotateBottomLine {
     0% {
-        bottom: 45%;
+        bottom: 43%;
         transform: rotate(-45deg);
     }
 
@@ -70,21 +70,19 @@
     position: fixed;
     top: 0;
     width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
 
     .nav_content {
-        padding: 1rem;
+        padding: 1.5rem;
         display: flex;
         justify-content: space-between;
 
         .burger {
-            z-index: 1;
             right: 0;
             position: relative;
-            width: 2rem;
-            height: 2rem;
+            width: 1.5rem;
+            height: 1.5rem;
             cursor: pointer;
             text-decoration: none;
             border: none;
@@ -117,32 +115,36 @@
             .line_top {
                 position: absolute;
                 top: 1rem;
-                background-color: white;
+                background-color: #D0D6F9;
                 height: 3px;
                 width: 100%;
+                z-index: 1;
             }
 
             .line_bottom {
                 position: absolute;
                 bottom: 1rem;
-                background-color: white;
+                background-color: #D0D6F9;
                 height: 3px;
                 width: 100%;
                 transition: all 0.3s ease;
+                z-index: 1;
             }
 
             .line_middle {
                 position: absolute;
-                top: 45%;
-                background-color: white;
+                top: 43%;
+                background-color: #D0D6F9;
                 height: 3px;
                 width: 100%;
+                z-index: 1;
             }
         }
 
     }
 
     .list {
+        letter-spacing: .15rem;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
@@ -162,6 +164,10 @@
             padding-top: 10vh;
             position: absolute;
             top: 0;
+
+            strong {
+                font-weight: 600;
+            }
         }
     }
 }
