@@ -41,7 +41,7 @@ export default function Crew() {
                     </li>
                 ))}
             </ul>
-            <h3>
+            <h3 className={styles.gray}>
                 {selectedCrewMember.role.toUpperCase()}
             </h3>
             <h2>
