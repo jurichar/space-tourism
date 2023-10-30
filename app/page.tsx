@@ -2,7 +2,6 @@ import Link from 'next/link'
 import styles from './page.module.scss'
 import { Barlow, Barlow_Condensed } from 'next/font/google'
 
-
 const barlowCondensed = Barlow_Condensed({
   subsets: ['latin'],
   weight: '200'
@@ -24,9 +23,7 @@ export default function Home() {
       </h1>
       <div className={styles.paragraph}>
         <p className={barlow.className}>
-          Let's face it; if you want to go to space, you might as well genuinely go to
-          outer space and not hover kind of on the edge of it. Well sit back, and relax
-          because we'll give you a truly out of this world experience!
+          Let&#39;s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we&#39;ll give you a truly out of this world experience!
         </p>
       </div>
       <Link href={"/destination"} className={styles.button}>
