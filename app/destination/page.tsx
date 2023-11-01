@@ -46,19 +46,21 @@ export default function Destination() {
                 {selectedDestination.description}
             </p>
             <div className={styles.separator}></div>
-            <div>
-                <p className={barlow.className}>
-                    AVG. DISTANCE</p>
-                <h2>
-                    {selectedDestination.distance.toUpperCase()}
-                </h2>
-            </div>
-            <div>
-                <p className={barlow.className}>
-                    EST. TRAVEL TIME</p>
-                <h2>
-                    {selectedDestination.travel.toUpperCase()}
-                </h2>
+            <div className={styles.information}>
+                <div>
+                    <p className={barlow.className}>
+                        AVG. DISTANCE</p>
+                    <h2>
+                        {selectedDestination.distance.toUpperCase()}
+                    </h2>
+                </div>
+                <div>
+                    <p className={barlow.className}>
+                        EST. TRAVEL TIME</p>
+                    <h2>
+                        {selectedDestination.travel.toUpperCase()}
+                    </h2>
+                </div>
             </div>
         </div >
     );

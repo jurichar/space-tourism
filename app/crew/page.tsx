@@ -22,7 +22,7 @@ export default function Crew() {
 
     return (
         <div className={styles.content}>
-            <h3 className={barlowCondensed.className}>
+            <h3 className={`${barlowCondensed.className} ${styles.title}`}>
                 <span className={styles.gray}>{"02"}</span>
                 {"   "}
                 <span>{"Meet your crew".toUpperCase()}</span>

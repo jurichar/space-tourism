@@ -9,7 +9,7 @@
     background-image:
         radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%),
         url("/assets/destination/background-destination-mobile.jpg");
-    background-size: auto 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
@@ -104,6 +104,61 @@
         opacity: 0.25;
     }
 
-    // Tablet
+    .information {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        min-height: 20vh;
+        height: 100%;
+    }
 
+    // Tablet
+    @media (min-width: 768px) {
+        justify-content: center;
+        gap: 1rem;
+        min-height: 100vh;
+        padding: 4rem 8rem;
+        padding-bottom: 0;
+        background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%),
+            url("/assets/destination/background-destination-tablet.jpg");
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        h3 {
+            position: absolute;
+            left: 10px;
+            top: 8rem;
+        }
+
+        .paragraph {
+            line-height: 1.7rem;
+        }
+
+        .button {
+            max-width: 15rem;
+            height: 15rem;
+            font-size: 2rem;
+        }
+
+        .information {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-end;
+            gap: 1rem;
+            width: 100%;
+            min-height: 10vh;
+            height: 100%;
+        }
+
+        @media (min-width: 1440px) {
+            background-image:
+                radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%),
+                url("/assets/destination/background-destination-desktop.jpg");
+        }
+    }
 }

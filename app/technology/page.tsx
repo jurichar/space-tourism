@@ -22,7 +22,7 @@ export default function Technology() {
 
     return (
         <div className={styles.content}>
-            <h3 className={barlowCondensed.className}>
+            <h3 className={`${barlowCondensed.className} ${styles.title}`}>
                 <span className={styles.gray}>{"03"}</span>
                 {"   "}
                 <span>{"Pick your destination".toUpperCase()}</span>
