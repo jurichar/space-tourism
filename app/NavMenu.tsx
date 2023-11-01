@@ -28,6 +28,7 @@ export default function NavMenu() {
                 </button>
             </div>
             <div className={`${styles.list} ${showMenu ? styles.show : styles.hide}`}>
+                <div className={styles.separator}></div>
                 <ul className={barlow.className}>
                     <li>
                         <Link className={active == 0 ? styles.active : ""} href={"/"} onClick={
