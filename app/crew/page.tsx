@@ -30,26 +30,28 @@ export default function Crew() {
             <div className={styles.image_container}>
                 <Image className={styles.image} src={selectedCrewMember.images.png} alt={"Space Tourism"} width={320} height={320} quality={100} style={{ objectFit: "contain" }} />
             </div>
-            <ul className={styles.ul}>
-                {crewMembers.map((crewMember) => (
-                    <li key={crewMember.name} onClick={
-                        () => setSelectedCrewMember(crewMember)
-                    }
-                    >
-                        <div className={`${styles.dot} ${selectedCrewMember === crewMember ? styles.active : ''}`}
-                        ></div>
-                    </li>
-                ))}
-            </ul>
-            <h3 className={styles.gray}>
-                {selectedCrewMember.role.toUpperCase()}
-            </h3>
-            <h2>
-                {selectedCrewMember.name.toUpperCase()}
-            </h2>
-            <p className={barlow.className}>
-                {selectedCrewMember.bio}
-            </p>
+            <div className={styles.divider}>
+                <ul className={styles.ul}>
+                    {crewMembers.map((crewMember) => (
+                        <li key={crewMember.name} onClick={
+                            () => setSelectedCrewMember(crewMember)
+                        }
+                        >
+                            <div className={`${styles.dot} ${selectedCrewMember === crewMember ? styles.active : ''}`}
+                            ></div>
+                        </li>
+                    ))}
+                </ul>
+                <h3 className={styles.gray}>
+                    {selectedCrewMember.role.toUpperCase()}
+                </h3>
+                <h2>
+                    {selectedCrewMember.name.toUpperCase()}
+                </h2>
+                <p className={barlow.className}>
+                    {selectedCrewMember.bio}
+                </p>
+            </div>
         </div>
     );
 }
